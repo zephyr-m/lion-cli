@@ -1,5 +1,5 @@
 {
-  "name": "lion-cli",
+  "name": "lionai-cli",
   "version": "0.1.0",
   "description": "AI coding agent for the terminal. DeepSeek/Gemini/any OpenAI-compatible LLM.",
   "type": "module",
