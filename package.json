@@ -1,0 +1,17 @@
+{
+  "name": "lion-cli",
+  "version": "0.1.0",
+  "description": "AI coding agent for the terminal. DeepSeek/Gemini/any OpenAI-compatible LLM.",
+  "type": "module",
+  "bin": {
+    "lion": "./cli.js"
+  },
+  "files": ["cli.js", "llm.js", "tools.js", "store.js", "agent.js"],
+  "keywords": ["ai", "cli", "agent", "coding", "deepseek", "gemini", "llm"],
+  "author": "zephyr-m",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0"
+  }
+}
