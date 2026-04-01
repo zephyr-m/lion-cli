@@ -47,7 +47,14 @@ async function setup() {
     default: provider = 'deepseek';
   }
 
-  const key = (await ask(`\nAPI Key: `)).trim();
+  let key = '';
+  while (!key) {
+    key = (await ask(`\nAPI Key: `)).trim();
+    if (!key || !/^[\x20-\x7E]+$/.test(key)) {
+      console.log(`${C.red}❌ Невалидный ключ (только ASCII символы)${C.r}`);
+      key = '';
+    }
+  }
   setProvider({ provider, apiKey: key });
   console.log(`\n${C.g}✅ Сохранено!${C.r}\n`);
   rl.close();
