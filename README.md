@@ -6,7 +6,7 @@ AI coding agent for the terminal. Like Claude Code, but for **DeepSeek**, **Gemi
 
 ```bash
 npm i -g lionai-cli
-lion .
+lion
 ```
 
 First launch asks for provider and API key. That's it.
