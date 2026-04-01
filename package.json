@@ -1,6 +1,6 @@
 {
   "name": "lionai-cli",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "AI coding agent for the terminal. DeepSeek/Gemini/any OpenAI-compatible LLM.",
   "type": "module",
   "bin": {
@@ -11,7 +11,8 @@
     "llm.js",
     "tools.js",
     "store.js",
-    "agent.js"
+    "agent.js",
+    "README.md"
   ],
   "keywords": [
     "ai",
