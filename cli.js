@@ -5,7 +5,7 @@
  */
 import { createInterface } from 'readline';
 import { LLM, PROVIDERS } from './llm.js';
-import { agentLoop } from './agent.js';
+import { agentLoop, toggleDebug } from './agent.js';
 import {
   getProvider, setProvider, setConfig, getConfig,
   createSession, listSessions, getSession, getMessages,
@@ -120,10 +120,16 @@ Rules:
       console.log(`  Total:   ↑${total.tokens_in} ↓${total.tokens_out} = ${total.total} tok\n`);
       rl.prompt(); return;
     }
+    if (line === '/debug') {
+      const on = toggleDebug();
+      console.log(`Debug: ${on ? 'ON — полная прозрачность' : 'OFF'}`);
+      rl.prompt(); return;
+    }
     if (line === '/help') {
       console.log(`\n${C.b}Commands:${C.r}`);
       console.log('  /sessions  — list sessions');
       console.log('  /usage     — token usage');
+      console.log('  /debug     — toggle request/response logging');
       console.log('  /new       — new session');
       console.log('  /clear     — clear context');
       console.log('  /config    — reconfigure provider');
